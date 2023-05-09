@@ -8,8 +8,12 @@
 // visa info om en Dog resp flera, visa info = output HTML, klass RenderDog
 // =============================================================================
 
-// DEL 1: Vår data och funktionalitet
+// *** DEL 1: Vår data och funktionalitet
 
+
+/*
+En klass som lagrar all info om en hund. Klassen ska även ha funktioner för att lägga till, ändra och läsa info.
+*/
 class Dog {
     // egenskap = en variabel inne i ett objekt
     private $name = "";
@@ -29,6 +33,9 @@ class Dog {
     }
 }
 
+/*
+En klass som lagrar alla hundar i en intern privat array. Klassen ska även ha funktioner för att läsa och ändra på arrayen.
+*/
 class DogHotell {
     private $dogs = [];
 
@@ -41,6 +48,9 @@ class DogHotell {
     }
 }
 
+/*
+En klass för att visa upp info dvs en klass med flera funktioner för att skriva ut HTML
+*/
 class RenderDog {
 
     function renderDogInfo(Dog $dog): string {
@@ -49,9 +59,8 @@ class RenderDog {
 
 }
 
-// DEL 2: Vår app
+// *** DEL 2: Vår app
 
-//$testDog = new Dog("Pluto","orange", 12);
 $myDogs = new DogHotell([
     new Dog("Pluto","orange", 12),
     new Dog("Pricken","svart-vit", 3),
@@ -61,7 +70,7 @@ $myDogs = new DogHotell([
 
 $render = new RenderDog();
 
-// DEL 3: Vår output = echo HTML
+// *** DEL 3: Vår output = echo och HTML
 ?>
 
 <!DOCTYPE html>

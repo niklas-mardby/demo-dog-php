@@ -74,11 +74,8 @@ $render = new RenderDog();
 </head>
 <body>
     
-    <h1>My Dog</h1>
+    <h1>&#128054; My Dogs &#128054;</h1>
     <?php
-        //echo "<p>Name: {$testDog->name} </p>";
-        //echo "<p>Color: {$testDog->color} </p>";
-
         foreach($myDogs->getDogs() as $dog) {
             echo $render->renderDogInfo($dog);
         }
